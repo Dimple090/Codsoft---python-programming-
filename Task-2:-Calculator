@@ -1,0 +1,55 @@
+# Define a function to add two numbers
+def Add_numbers(num1, num2):
+    return num1 + num2
+
+# Define a function to subtract two numbers
+def Subtract_numbers(num1, num2):
+    return num1 - num2
+
+# Define a function to multiply two numbers
+def Multiply_numbers(num1, num2):
+    return num1 * num2
+
+# Define a function to divide two numbers
+def Divide_numbers(num1, num2):
+    if num2 == 0:
+        return "Error: Division by zero is undefined."
+    else:
+        return num1 / num2
+
+# Define a function to calculate the power of a number
+def Power_of_numbers(num1, num2):
+    return num1 ** num2
+
+# Define a function to calculate the square root of a number
+def Square_root(num):
+    if num < 0:
+        return "Error: Square root of negative numbers is undefined."
+    else:
+        return num ** 0.5
+
+# Prompt the user to input two numbers and an operation choice
+
+print("Please input two numbers:")
+number1 = float(input())
+number2 = float(input())
+
+print("Please choose an operation (+, -, *, /, ^, sqrt):")
+operation = input()
+
+# Perform the calculation and display the result
+
+if operation == "+":
+    print(number1, "+", number2, "=", Add_numbers(number1, number2))
+elif operation == "-":
+    print(number1, "-", number2, "=", Subtract_numbers(number1, number2))
+elif operation == "*":
+    print(number1, "*", number2, "=", Multiply_numbers(number1, number2))
+elif operation == "/":
+    print(number1, "/", number2, "=", Divide_numbers(number1, number2))
+elif operation == "^":
+    print(number1, "^", number2, "=", Power_of_numbers(number1, number2))
+elif operation == "sqrt":
+    print("sqrt(", number1, ") =", Square_root(number1))
+else:
+    print("Error: Invalid operation. Please choose +, -, *, /, ^, or sqrt.")
